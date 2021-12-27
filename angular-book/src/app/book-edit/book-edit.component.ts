@@ -35,7 +35,7 @@ export class BookEditComponent implements OnInit {
       author : data.author,
       description: data.description,
     }
-    this.bookService.store(book).subscribe(()=> {
+    this.bookService.update(this.id,book).subscribe(()=> {
       alert('Sửa sách thành công');
       this.bookForm.reset();
       this.Router.navigate(['/books']);
